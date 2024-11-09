@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task List</title>
+        <script type="module" src="{% static '/js/main.js' %}"></script>
+        <link rel="stylesheet" href="{% static '/css/main.css' %}">
+    </head>
+    <body>
+        <div class="token">
+            {% csrf_token %}
+        </div>
+
+        <header style="position: absolute; z-index: 1">
+            <form method="POST" action="/logout/">
+                {% csrf_token %}
+                You are {{ username }}
+                <input type="submit" value="Log out">
+            </form>
+        </header>
+        <div id="app"></div>
+
+    </body>
+</html>

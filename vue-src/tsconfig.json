@@ -1,0 +1,12 @@
+{
+  "include": [
+    "src/**/*", "src/**/*.vue"
+  ],
+  "compilerOptions": {
+    "isolatedModules": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler"
+  }
+}
