@@ -31,7 +31,7 @@
                 this.done = !this.done;
                 this.$emit("statusChange", {
                     taskID: this.info.id,
-                    status: this.done
+                    status: this.done ? TaskStatus.done : TaskStatus.not_done
                 });
             },
 

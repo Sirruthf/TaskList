@@ -210,8 +210,7 @@ export default (await import('vue')).defineComponent({
                     "X-CSRFToken": this.csrf
                 },
                 body: JSON.stringify({
-                    id: taskID,
-                    status: status
+                    id: taskID, status: status == TaskStatus.done
                 })
             });
         },

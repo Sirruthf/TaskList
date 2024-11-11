@@ -173,7 +173,7 @@
 						"X-CSRFToken": this.csrf
 					},
 					body: JSON.stringify({
-						id: taskID, status
+						id: taskID, status: status == TaskStatus.done
 					})
 				});
 			},
